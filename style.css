@@ -1,0 +1,51 @@
+*
+{
+	padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+}
+.parent
+{
+	background: blue;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.child
+{
+	font-size: 40px;
+	border:1px solid black ;
+	padding: 3px;
+	color: white;
+}
+.child:last-child
+{
+	display: none;
+}
+
+
+@media (max-width:768px)
+{
+	.parent
+	{
+		flex-direction: column;
+	}
+	.child
+	{
+		width: 100%;
+		text-align: center;
+	}
+
+}
+@media (max-width:576px)
+{
+	.child:last-child
+	{
+		display: block;
+	}
+	.child:not(.child:last-child)
+    {
+	    display: none;
+    }
+}
